@@ -1,0 +1,45 @@
+.bootstrap_chat {
+  background-color: #74EBD5;
+  min-height: 100vh;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.messages-box, .chat-box {
+  height: 540px;
+  overflow-y: scroll;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #212121;
+  background-color: #f2f0ec;
+  border-color: #f2f0ec;
+}
+
+.list-group-item .list-group-item-action.active {
+  background-color: #f2f0ec !important;
+}
+
+.btn-link {
+  --bs-btn-font-weight: 400;
+  --bs-btn-color: #C2B8AA;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: #b7aa99;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-color: #C2B8AA;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-disabled-color: #C2B8AA;
+  --bs-btn-disabled-border-color: transparent;
+  --bs-btn-box-shadow: none;
+  --bs-btn-focus-shadow-rgb: 105, 136, 228;
+  text-decoration: underline;
+}
+
