@@ -30,7 +30,7 @@ function Login() {
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="formCheck-1" />
                                     <label className="form-check-label l-h c-color">Remember me</label>
-                                </div><a className="text-decoration-none l-h fp-color" href="#">Forgot your passwords?</a>
+                                </div><Link to={"#"} className="text-decoration-none l-h fp-color">Forgot your passwords?</Link>
                             </div>
                         </div>
                         <div className="row mb-4">
@@ -38,12 +38,12 @@ function Login() {
                         </div>
                         <div className="row">
                             <div className="col col-12">
-                                <p className="mb-0 text-center fw-normal c-color d-r">Do not have an account?&nbsp;<a className="rl-color text-decoration-none" href="#">Register</a> </p>
+                                <p className="mb-0 text-center fw-normal c-color d-r">Do not have an account?&nbsp;<Link to={"#"} className="rl-color text-decoration-none">Register</Link> </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="col col-12 col-lg-6" style={{ background: "url(&quot;assets/img/rightImg.png&quot;) center / cover no-repeat" }}></div>
+                <div className="col col-12 col-lg-6 imgRight"></div>
             </div>
         </div>
 
