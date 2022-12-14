@@ -15,9 +15,12 @@ function EditBooking() {
                         <TopMenu />
                         <div className="container-fluid mb-5 px-5">
                             <div className="row mt-5 mb-3">
-                                <div className="col d-flex justify-content-start align-items-start gap-3"><img className="mt-2" src={BookImg} />
+                                <div className="col d-flex justify-content-start align-items-start gap-3">
+                                    <img className="mt-2" src={BookImg} />
                                     <div>
-                                        <p className="fw-bold s-h pri-color mb-0">Booking information</p>
+                                        <p className="fw-bold s-h pri-color mb-0">
+                                            Booking information
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -27,31 +30,52 @@ function EditBooking() {
                                         <div className="card-body px-lg-5 mx-lg-5 py-lg-5">
                                             <div className="row mb-5 justify-content-between align-items-center">
                                                 <div className="col col-12 col-lg-5">
-                                                    <p className="mb-1 l-h l-color fw-normal">Booking number</p><input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="IR-AP-1245" disabled={true} readOnly={true} />
+                                                    <p className="mb-1 l-h l-color fw-normal">
+                                                        Booking number
+                                                    </p>
+                                                    <input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="IR-AP-1245" disabled={true} readOnly={true} />
                                                 </div>
                                                 <div className="col col-12 col-lg-5">
-                                                    <p className="mb-1 l-h l-color fw-normal">Client name </p><input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="Marsdoc company" disabled={true} readOnly={true} />
-                                                </div>
-                                            </div>
-                                            <div className="row mb-5 justify-content-between align-items-center">
-                                                <div className="col col-12 col-lg-5">
-                                                    <p className="mb-1 l-h l-color fw-normal">Payment</p><input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="Cash" disabled={true} readOnly={true} />
-                                                </div>
-                                                <div className="col col-12 col-lg-5">
-                                                    <p className="mb-1 l-h l-color fw-normal">Client contact number </p><input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="+65-654-7854-654" disabled={true} readOnly={true} />
+                                                    <p className="mb-1 l-h l-color fw-normal">
+                                                        Client name
+                                                    </p>
+                                                    <input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="Marsdoc company" disabled={true} readOnly={true} />
                                                 </div>
                                             </div>
                                             <div className="row mb-5 justify-content-between align-items-center">
                                                 <div className="col col-12 col-lg-5">
-                                                    <p className="mb-1 l-h l-color fw-normal">Number of trucks</p><input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="3" disabled={true} readOnly={true} />
+                                                    <p className="mb-1 l-h l-color fw-normal">
+                                                        Payment
+                                                    </p>
+                                                    <input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="Cash" disabled={true} readOnly={true} />
                                                 </div>
                                                 <div className="col col-12 col-lg-5">
-                                                    <p className="mb-1 l-h l-color fw-normal">Date of booking </p><input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="12/2/2020" disabled={true} readOnly={true} />
+                                                    <p className="mb-1 l-h l-color fw-normal">
+                                                        Client contact number
+                                                    </p>
+                                                    <input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="+65-654-7854-654" disabled={true} readOnly={true} />
                                                 </div>
                                             </div>
                                             <div className="row mb-5 justify-content-between align-items-center">
                                                 <div className="col col-12 col-lg-5">
-                                                    <p className="mb-1 l-h l-color fw-normal">Client adress</p><textarea className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" disabled={true} readOnly={true}>Turkish Marble Compny Ataşehir/İstanbul, Turkey </textarea>
+                                                    <p className="mb-1 l-h l-color fw-normal">
+                                                        Number of trucks
+                                                    </p>
+                                                    <input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="3" disabled={true} readOnly={true} />
+                                                </div>
+                                                <div className="col col-12 col-lg-5">
+                                                    <p className="mb-1 l-h l-color fw-normal">
+                                                        Date of booking
+                                                    </p>
+                                                    <input type="text" className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" value="12/2/2020" disabled={true} readOnly={true} />
+                                                </div>
+                                            </div>
+                                            <div className="row mb-5 justify-content-between align-items-center">
+                                                <div className="col col-12 col-lg-5">
+                                                    <p className="mb-1 l-h l-color fw-normal">
+                                                        Client adress
+                                                    </p>
+                                                    <textarea className="w-100 px-4 py-3 td-input pri-color fw-medium l-h text-center" disabled={true} readOnly={true}>Turkish Marble Compny Ataşehir/İstanbul, Turkey </textarea>
                                                 </div>
                                                 <div className="col col-12 col-lg-5"></div>
                                             </div>

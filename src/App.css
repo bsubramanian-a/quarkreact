@@ -419,3 +419,18 @@ div {
   right: 50%;
   transform: translateX(50%);
 }
+
+.btn-download {
+  height: 36px;
+  background-color: #FFCA4D;
+  border-color: #FFCA4D;
+  color: #fff;
+}
+
+.span-c {
+  color: rgb(84, 105, 177);
+}
+
+.table-bg {
+  background-color: #E7E9F4;
+}

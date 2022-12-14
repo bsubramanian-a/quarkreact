@@ -13,6 +13,8 @@ import AddTruck from './screens/AddTruck';
 import DashboardBooking from './screens/DashboardBooking';
 import DashboardComplete from './screens/DashboardComplete';
 import CargoInfo from './screens/CargoInfo';
+import Information from './screens/Information';
+import Document from './screens/Document';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -34,6 +36,8 @@ function App() {
         <Route path='/dashboard-booking' element={<DashboardBooking/>}/>
         <Route path='/dashboard-complete' element={<DashboardComplete/>}/>
         <Route path='/cargo-information' element={<CargoInfo/>}/>
+        <Route path='/information' element={<Information/>}/>
+        <Route path='/document' element={<Document/>}/>
       </Routes>
     </div>
   );
