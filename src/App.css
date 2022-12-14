@@ -364,3 +364,58 @@ div {
   height: 50px;
   width: 50px;
 }
+
+.card-c {
+  background-color: #E7E9F4;
+  border: 1px solid #e7e9f4;
+}
+
+.m-card {
+  box-shadow: 4px 4px 16px #646F9430;
+  border-radius: 20px;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+}
+
+.circle-f {
+  border: 3px solid #FF1F1F;
+  height: 12px;
+  width: 12px;
+}
+
+.circle-t {
+  border: 3px solid #2CE296;
+  height: 12px;
+  width: 12px;
+}
+
+.arrow {
+  top: 28%;
+  left: 27.6%;
+  height: 18.5px;
+}
+
+.r-circle {
+  height: 25px;
+  width: 23px;
+  border: 3px solid #0A288F;
+}
+
+.search-d {
+  box-shadow: 0px 4px 16px #5469b130;
+  border-radius: 10px;
+}
+
+.d-card {
+  box-shadow: 4px 4px 16px #646F9430;
+  border-radius: 10px;
+}
+
+.pos-card {
+  bottom: 3%;
+  width: 90%;
+  right: 50%;
+  transform: translateX(50%);
+}

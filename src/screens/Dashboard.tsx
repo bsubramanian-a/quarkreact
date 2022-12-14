@@ -25,10 +25,10 @@ function Dashboard() {
                                     </p>
                                     <form className="mb-4">
                                         <div className="input-group w-100">
-                                            <input className="bg-light form-control inputs w-100 border-0 small px-4 py-3" type="text" placeholder="search" style={{ boxShadow: "0px 4px 16px #5469b130", borderRadius: "10px" }} />
+                                            <input className="bg-light form-control inputs w-100 border-0 small px-4 py-3 search-d" type="text" placeholder="search" />
                                         </div>
                                     </form>
-                                    <div className="vh-100 bg-white" style={{ boxShadow: "4px 4px 16px #646F9430", borderRadius: "10px" }}></div>
+                                    <div className="vh-100 bg-white d-card"></div>
                                 </div>
                                 <div className="col col-12 col-lg-3">
                                     <div className="card w-100 card-dash mb-3">
