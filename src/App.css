@@ -434,3 +434,18 @@ div {
 .table-bg {
   background-color: #E7E9F4;
 }
+
+.bg-t {
+  background-color: #F4F7FA;
+}
+
+.img-c {
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+.input-new {
+  box-shadow: 0px 4px 16px rgba(132,147,199,0.1450980392156863);
+  border-radius: 10px;
+}
