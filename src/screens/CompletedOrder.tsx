@@ -11,15 +11,15 @@ import BookingInfoTab from './components/BookingInfoTab';
 
 function CompletedOrder() {
     return (
-        <div id="page-top" className="bg-m">
-            <div id="wrapper" className="d-flex vh-100">
+        <div id="page-top">
+            <div id="wrapper" className="d-flex vh-100 bg-white">
                 <LeftNav />
-                <div className="d-flex flex-column" id="content-wrapper">
-                    <div id="content">
+                <div className="d-flex flex-column bg-m" id="content-wrapper">
+                    <div id="content" className="bg-m">
                         <TopMenu />
                         <div className="container-fluid">
                             <div>
-                                <ul className="nav nav-tabs border-0 overflow-scroll flex-nowrap d-flex justify-content-between align-items-stretch gap-2" role="tablist">
+                                <ul className="nav nav-tabs border-0 of-s py-3 flex-nowrap d-flex justify-content-between align-items-stretch gap-2" role="tablist">
                                     <li className="nav-item" role="presentation">
                                         <Link to={"#tab-1"} className="nav-link active px-3 px-xxl-4 text-center h-100 d-flex align-items-center" role="tab" data-bs-toggle="tab">
                                             Booking information
