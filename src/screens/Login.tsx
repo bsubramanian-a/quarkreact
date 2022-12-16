@@ -7,7 +7,7 @@ function Login() {
     return (
         <div className="bg-white">
             <div className="row vh-100 mx-0">
-                <div className="col col-12 col-lg-6 d-flex justify-content-center">
+                <div className="col col-12 col-lg-6 mt-5 mt-lg-0 mb-4 mb-lg-0 d-flex justify-content-center">
                     <div className="container my-auto mx-md-5">
                         <div className="row mb-5">
                             <div className="col col-12">
@@ -43,7 +43,7 @@ function Login() {
                         </div>
                     </div>
                 </div>
-                <div className="col col-12 col-lg-6 imgRight"></div>
+                <div className="col col-12 col-lg-6 imgRight vh-100"></div>
             </div>
         </div>
 

@@ -7,11 +7,11 @@ import BookImg from '../assets/img/order-img/bookInfo.svg'
 
 function EditBooking() {
     return (
-        <div id="page-top" className="bg-color">
+        <div id="page-top" className="bg-white">
             <div id="wrapper" className="d-flex vh-100">
                 <LeftNav />
                 <div className="d-flex flex-column" id="content-wrapper">
-                    <div id="content">
+                    <div id="content" className='bg-color'>
                         <TopMenu />
                         <div className="container-fluid mb-5 px-5">
                             <div className="row mt-5 mb-3">

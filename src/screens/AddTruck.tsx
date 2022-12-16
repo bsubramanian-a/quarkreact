@@ -7,11 +7,11 @@ import BookImg from '../assets/img/order-img/bookInfo.svg'
 
 function AddTruck() {
     return (
-        <div id="page-top" className="bg-m">
+        <div id="page-top" className="bg-white">
             <div id="wrapper" className="d-flex vh-100">
                 <LeftNav />
                 <div className="d-flex flex-column" id="content-wrapper">
-                    <div id="content">
+                    <div id="content" className='bg-m'>
                         <TopMenu />
                         <div className="container-fluid px-5">
                             <div className="row mt-5 mb-3">
@@ -19,7 +19,7 @@ function AddTruck() {
                                     <img src={BookImg} />
                                     <div>
                                         <p className="fw-bold s-h pri-color mb-0">
-                                            Booking information
+                                            Trucks information
                                         </p>
                                     </div><button className="btn btn-primary rounded-pill p-size fw-medium px-4" type="button">
                                         Upload Driver Document
@@ -39,7 +39,7 @@ function AddTruck() {
                                                 </div>
                                                 <div className="col col-12 col-lg-5">
                                                     <p className="mb-1 l-h l-color fw-normal">
-                                                        Driver Name 
+                                                        Driver Name
                                                     </p>
                                                     <input type="text" className="w-100 px-4 py-3 t-input" />
                                                 </div>
@@ -53,7 +53,7 @@ function AddTruck() {
                                                 </div>
                                                 <div className="col col-12 col-lg-5">
                                                     <p className="mb-1 l-h l-color fw-normal">
-                                                        Phone number 
+                                                        Phone number
                                                     </p>
                                                     <input type="text" className="w-100 px-4 py-3 t-input" />
                                                 </div>
@@ -65,7 +65,7 @@ function AddTruck() {
                                                     </p>
                                                     <div className="dropdown w-100">
                                                         <button className="btn btn-primary dropdown-toggle t-input px-4 py-3 w-100 d-flex justify-content-between align-items-center" aria-expanded="false" data-bs-toggle="dropdown" type="button">
-                                                            Dropdown 
+                                                            Dropdown
                                                         </button>
                                                         <div className="dropdown-menu t-input w-100">
                                                             <Link to={"#"} className="dropdown-item">

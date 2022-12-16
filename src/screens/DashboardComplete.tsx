@@ -16,7 +16,7 @@ import Truck from '../assets/img/dash-img/truck.svg'
 
 function DashboardComplete() {
     return (
-        <body id="page-top" className="bg-m">
+        <body id="page-top" className="bg-white">
             <div id="wrapper" className="d-flex vh-100">
                 <LeftNav />
                 <div className="d-flex flex-column" id="content-wrapper">

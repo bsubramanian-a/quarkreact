@@ -6,16 +6,16 @@ import TopMenu from './components/TopMenu';
 
 function EditProfile() {
     return (
-        <div id="page-top" className='bg-color'>
+        <div id="page-top" className='bg-white'>
             <div id="wrapper" className="d-flex vh-100">
                 <LeftNav />
                 <div className="d-flex flex-column" id="content-wrapper">
-                    <div id="content" className="bg-m">
+                    <div id="content" className='bg-color'>
                         <TopMenu />
-                        <div className="container-fluid mb-5">
+                        <div className="container-fluid pt-4 px-5 mb-5">
                             <div className="row">
                                 <div className="col">
-                                    <div className="card px-lg-5 card-sp">
+                                    <div className="card p-lg-4 card-sp">
                                         <div className="card-body px-lg-5 mx-lg-5">
                                             <div className="row mb-5 justify-content-between align-items-center">
                                                 <div className="col col-12 col-lg-5">

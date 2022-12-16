@@ -7,11 +7,11 @@ import BookImg from '../assets/img/order-img/bookInfo.svg'
 
 function Information() {
     return (
-        <div id="page-top" className="bg-m">
+        <div id="page-top" className="bg-white">
             <div id="wrapper" className="d-flex vh-100">
                 <LeftNav />
                 <div className="d-flex flex-column" id="content-wrapper">
-                    <div id="content">
+                    <div id="content" className='bg-m'>
                         <TopMenu />
                         <div className="container-fluid mb-5">
                             <div className="row">

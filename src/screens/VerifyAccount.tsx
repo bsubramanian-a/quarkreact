@@ -7,8 +7,8 @@ function VerifyAccount() {
     return (
         <div className="bg-white">
             <div className="row vh-100 mx-0">
-                <div className="col col-12 col-lg-6 d-flex justify-content-center">
-                    <div className="container my-auto mx-md-5">
+                <div className="col col-12 col-lg-6 my-5 my-lg-0 py-5 py-lg-0 d-flex justify-content-center">
+                    <div className="container my-auto mx-md-5 py-5 py-lg-0">
                         <div className="row mb-5">
                             <div className="col col-12">
                                 <h1 className="fw-medium mb-2 h-h h-color">Verify your account</h1>
@@ -24,7 +24,7 @@ function VerifyAccount() {
                         </div>
                     </div>
                 </div>
-                <div className="col col-12 col-lg-6 imgTRight"></div>
+                <div className="col col-12 col-lg-6 imgTRight vh-100"></div>
             </div>
         </div>
     );

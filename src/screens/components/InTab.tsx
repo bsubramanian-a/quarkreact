@@ -19,7 +19,7 @@ function InTab() {
                     <img src={PrinterC} />
                 </button>
             </div>
-            <div className="col col-12 col-lg-8 d-flex justify-content-end align-items-center gap-3">
+            <div className="col col-12 col-lg-8 d-lg-flex justify-content-end align-items-center gap-3">
                 <form className="w-50">
                     <div className="input-group">
                         <input className="bg-light form-control bg-white ph-t border-0 t-ts px-4 py-3 input-new" type="text" placeholder="search" />
@@ -35,7 +35,10 @@ function InTab() {
                         <img className="position-absolute img-c" src={Calender} />
                     </div>
                 </div>
-                <div className="dropdown"><button className="btn btn-primary dropdown-toggle bg-white border-0 t-ts px-4 py-3 d-flex justify-content-between align-items-center gap-3 btn-download" aria-expanded="false" data-bs-toggle="dropdown" type="button">All booking </button>
+                <div className="dropdown">
+                    <button className="btn btn-primary dropdown-toggle bg-white border-0 t-ts px-4 py-3 d-flex justify-content-between align-items-center gap-3 btn-download" aria-expanded="false" data-bs-toggle="dropdown" type="button">
+                        All booking 
+                    </button>
                     <div className="dropdown-menu">
                         <Link to={"#"} className="dropdown-item">First Item</Link>
                         <Link to={"#"} className="dropdown-item">Second Item</Link>

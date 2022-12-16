@@ -6,11 +6,11 @@ import TopMenu from './components/TopMenu';
 
 function CargoInfo() {
     return (
-        <div id="page-top" className="bg-m">
+        <div id="page-top" className="bg-white">
             <div id="wrapper" className="d-flex vh-100">
                 <LeftNav />
                 <div className="d-flex flex-column" id="content-wrapper">
-                    <div id="content">
+                    <div id="content"  className='bg-m'>
                         <TopMenu />
                         <div className="container-fluid mb-5 px-5">
                             <div className="row mt-5 mb-3">
