@@ -32,63 +32,75 @@ function Dashboard() {
                                 </div>
                                 <div className="col col-12 col-lg-3">
                                     <div className="card w-100 card-dash mb-3">
-                                        <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Truck Information
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Vehicle} />
-                                            </div>
+                                        <div className="card-body p-4">
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/truck-information"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Truck Information
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Vehicle} />
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className="card w-100 card-dash mb-3">
+                                        <div className="card-body p-4">
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Booking information
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Information} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 card-dash mb-3">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Booking information
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Information} />
-                                            </div>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Cargo Information
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Cargo} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 card-dash mb-3">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Cargo Information
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Cargo} />
-                                            </div>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Origin and Destination
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Vehicle} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 card-dash mb-3">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Origin and Destination
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Vehicle} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card w-100 card-dash mb-3">
-                                        <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Messages
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Message} />
-                                            </div>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Messages
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Message} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 card-dash">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Documents
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Document} />
-                                            </div>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Documents
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Document} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

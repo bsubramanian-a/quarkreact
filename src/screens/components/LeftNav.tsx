@@ -5,7 +5,7 @@ import Logo from '../../assets/img/logo.svg'
 
 function LeftNav() {
     return (
-        <nav className="navbar navbar-dark align-items-start main-nav sidebar sidebar-dark accordion p-0">
+        <nav className="navbar navbar-dark vh-100 align-items-start main-nav sidebar sidebar-dark accordion p-0">
             <div className="container-fluid d-flex flex-column p-0"><a className="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-2 py-5 justify-content-center align-items-center flex-column" href="#">
                     <div className="sidebar-brand-icon rotate-n-15"><img src={Logo} style={{height: "42px", width: "42px"}} /></div>
                     <div className="mx-3 fw-bold d-r mt-2"><span>QUARK</span></div>
@@ -19,14 +19,14 @@ function LeftNav() {
                             </span>
                         </Link>
                     </li>
-                    <li className="nav-item"><Link to={"/add-truck"} className="nav-link d-flex align-items-center py-4">
+                    <li className="nav-item"><Link to={"#"} className="nav-link d-flex align-items-center py-4">
                             <div className="nav-icon me-3 nav-order"></div>
                             <span className="d-r">
                                 New order
                             </span>
                         </Link>
                     </li>
-                    <li className="nav-item"><Link to={"/profile"} className="nav-link d-flex align-items-center py-4">
+                    <li className="nav-item"><Link to={"/edit-profile"} className="nav-link d-flex align-items-center py-4">
                             <div className="me-3 nav-icon nav-profile"></div>
                             <span className="d-r">
                                 Profile

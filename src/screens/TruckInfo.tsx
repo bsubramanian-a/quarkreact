@@ -21,7 +21,7 @@ function TruckInfo() {
                                 <div className="col col-12 col-lg-6 mb-3 mb-lg-0 d-md-flex justify-content-between justify-content-lg-start align-items-center gap-3">
                                     <div>
                                         <p className="fw-bold s-h pri-color mb-0 d-flex justify-content-start align-items-center gap-3 mb-3 mb-md-0"><img src={BookImg} /> Trucks information</p>
-                                    </div><button className="btn btn-primary rounded-pill p-size fw-medium px-4 py-2" type="button">+ Add new truck</button>
+                                    </div><button className="btn btn-primary rounded-pill p-size fw-medium px-4 py-2" type="button"><Link className='text-decoration-none btn-color' to={"/add-truck"}>+ Add new truck</Link></button>
                                 </div>
                                 <div className="col col-12 col-lg-6 d-flex justify-content-end align-items-center gap-3">
                                     <button className="btn btn-primary btn-size d-flex justify-content-center align-items-center" type="button">

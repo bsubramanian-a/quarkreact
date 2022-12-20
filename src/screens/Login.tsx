@@ -30,15 +30,15 @@ function Login() {
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="formCheck-1" />
                                     <label className="form-check-label l-h c-color">Remember me</label>
-                                </div><Link to={"#"} className="text-decoration-none l-h fp-color">Forgot your passwords?</Link>
+                                </div><Link to={"/forget-password"} className="text-decoration-none l-h fp-color">Forgot your passwords?</Link>
                             </div>
                         </div>
                         <div className="row mb-4">
-                            <div className="col col-12"><button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type="button">Login</button></div>
+                            <div className="col col-12"><button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type="button"><Link className='text-decoration-none btn-color' to={"/profile"}>Login</Link></button></div>
                         </div>
                         <div className="row">
                             <div className="col col-12">
-                                <p className="mb-0 text-center fw-normal c-color d-r">Do not have an account?&nbsp;<Link to={"#"} className="rl-color text-decoration-none">Register</Link> </p>
+                                <p className="mb-0 text-center fw-normal c-color d-r">Do not have an account?&nbsp;<Link to={"/register"} className="rl-color text-decoration-none">Register</Link> </p>
                             </div>
                         </div>
                     </div>

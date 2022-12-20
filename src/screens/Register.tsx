@@ -14,7 +14,7 @@ function Register() {
                                 <h1 className="fw-bold mb-2 h-h h-color">Sign up with your email</h1>
                                 <p className="mb-0 fw-normal s-color d-r">
                                     Already have an account?&nbsp;
-                                    <Link to={"#"} className="rl-color text-decoration-none">
+                                    <Link to={"/"} className="rl-color text-decoration-none">
                                         Sign in
                                     </Link>
                                 </p>
@@ -70,7 +70,7 @@ function Register() {
                             </div>
                         </div>
                         <div className="row mb-4">
-                            <div className="col col-12"><button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type="button">Create account</button></div>
+                            <div className="col col-12"><button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type="button"><Link className='text-decoration-none btn-color' to={"/verify-account"}>Create account</Link></button></div>
                         </div>
                     </div>
                 </div>

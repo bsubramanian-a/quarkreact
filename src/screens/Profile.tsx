@@ -79,7 +79,13 @@ function Profile() {
                                             </div>
                                             <div className="row mb-5 justify-content-between align-items-center">
                                                 <div className="col col-12 col-lg-5"></div>
-                                                <div className="col col-12 col-lg-5"><button className="btn btn-primary w-100 px-4 py-3 rounded-pill fw-medium" type="button">Submit</button></div>
+                                                <div className="col col-12 col-lg-5">
+                                                    <button className="btn btn-primary w-100 px-4 py-3 rounded-pill fw-medium" type="button">
+                                                        <Link className='text-decoration-none btn-color' to={"/dashboard"}>
+                                                            Submit
+                                                        </Link>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
