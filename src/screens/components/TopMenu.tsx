@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, Navigate } from 'react-router-dom';
 import Notification from '../../assets/img/notification.svg'
 import Avatars from '../../assets/img/avatars/avatar1.jpeg'
 import { useDispatch, useSelector } from "react-redux";
@@ -7,10 +7,18 @@ import { logout } from '../../slices/auth';
 
 function TopMenu() {
     const dispatch = useDispatch<any>();
+    const { isLoggedIn } = useSelector((state: any) => state.auth);
+    console.log("islogged", isLoggedIn);
+    let navigate = useNavigate();
     const handleLogout = () => {
         console.log("logout")
-        dispatch(logout());            
+        dispatch(logout());   
+        navigate('/')         
     };
+
+    if (!isLoggedIn) {
+        return <Navigate to="/" />;
+    }
 
     return (
         <nav className="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">

@@ -61,9 +61,9 @@ function Login() {
             .required("This field is required!")
     });
 
-    // if (isLoggedIn) {
-    //     return <Navigate to="/profile" />;
-    // }
+    if (isLoggedIn) {
+        return <Navigate to="/profile" />;
+    }
 
     return (
         <div className="bg-white">

@@ -100,9 +100,11 @@ export const changepassword = createAsyncThunk(
   }
 );
 
-const initialState = user
-  ? { isLoggedIn: true, user }
-  : { isLoggedIn: false, user: null };
+const initialState = (user
+&& Object.keys(user).length === 0
+&& Object.getPrototypeOf(user) === Object.prototype)
+  ? { isLoggedIn: false, user:null }
+  : { isLoggedIn: true, user };
 
 const authSlice = createSlice({
   name: "auth",
@@ -119,6 +121,7 @@ const authSlice = createSlice({
     });
 
     builder.addCase(otp.fulfilled, (state, action) => {
+      console.log("1");
       state.isLoggedIn = true;
       state.user = action.payload.user;
     });
@@ -129,8 +132,8 @@ const authSlice = createSlice({
     });
 
     builder.addCase(login.fulfilled, (state, action) => {
-      state.isLoggedIn = false;
-      state.user = null;
+      state.isLoggedIn = true;
+      state.user = action.payload.user;
     });
 
     builder.addCase(login.rejected, (state, action) => {
@@ -161,6 +164,7 @@ const authSlice = createSlice({
     builder.addCase(logout.fulfilled, (state) => {
       state.isLoggedIn = false;
       state.user = null;
+      console.log("user", state.user)
     });
   }
 });

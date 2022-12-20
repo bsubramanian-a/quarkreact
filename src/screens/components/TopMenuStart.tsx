@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Notification from '../../assets/img/notification.svg'
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate, Navigate } from 'react-router-dom';
 
 function TopMenuStart() {
+    const { isLoggedIn } = useSelector((state: any) => state.auth);
+
+    if (!isLoggedIn) {
+        return <Navigate to="/" />;
+    }
+
     return (
         <nav className="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top pb-0">
             <div className="container-fluid pb-0">
