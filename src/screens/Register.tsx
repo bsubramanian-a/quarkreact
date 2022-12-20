@@ -77,7 +77,7 @@ function Register() {
                                         <h1 className="fw-bold mb-2 h-h h-color">Sign up with your email</h1>
                                         <p className="mb-0 fw-normal s-color d-r">
                                             Already have an account?&nbsp;
-                                            <Link to={"#"} className="rl-color text-decoration-none">
+                                            <Link to={"/"} className="rl-color text-decoration-none">
                                                 Sign in
                                             </Link>
                                         </p>

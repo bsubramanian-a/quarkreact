@@ -82,8 +82,8 @@ function ResetPassword() {
                             <Form>
                                 <div className="row mb-5">
                                     <div className="col col-12">
-                                        <h1 className="fw-bold mb-0 h-h h-color">Forget Password</h1>
-                                        <p className="s-h s-color mb-0">Please enter your email id to send a link to change password.</p>
+                                        <h1 className="fw-bold mb-0 h-h h-color">Reset Password</h1>
+                                        {/* <p className="s-h s-color mb-0">Please enter your email id to send a link to change password.</p> */}
                                     </div>
                                 </div>
                                 <div className="row mb-3">
