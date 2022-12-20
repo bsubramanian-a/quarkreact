@@ -9,8 +9,8 @@ function CargoInfo() {
         <div id="page-top" className="bg-white">
             <div id="wrapper" className="d-flex vh-100">
                 <LeftNav />
-                <div className="d-flex flex-column" id="content-wrapper">
-                    <div id="content"  className='bg-m'>
+                <div className="d-flex flex-column bg-m" id="content-wrapper">
+                    <div id="content">
                         <TopMenu />
                         <div className="container-fluid mb-5 px-5">
                             <div className="row mt-5 mb-3">

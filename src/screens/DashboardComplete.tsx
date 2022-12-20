@@ -42,64 +42,75 @@ function DashboardComplete() {
                                 </div>
                                 <div className="col col-12 col-lg-3">
                                     <div className="card w-100 mb-3 acard-dash">
-                                        <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Truck Information
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={AVehicle} />
-                                            </div>
+                                        <div className="card-body p-4">
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/truck-information"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Truck Information
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={AVehicle} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 mb-3 acard-dash">
-                                        <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Booking information
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={AInformation} />
-
-                                            </div>
+                                        <div className="card-body p-4">
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/booking-information"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Booking information
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={AInformation} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 mb-3 card-ddash">
-                                        <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Cargo Information
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={ACargo} />
-                                            </div>
+                                        <div className="card-body p-4">
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/cargo-information"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Cargo Information
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={ACargo} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 mb-3 card-ddash">
-                                        <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Origin and Destination
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={ALocation} />
-                                            </div>
+                                        <div className="card-body p-4">
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/information"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Origin and Destination
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={ALocation} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 mb-3 card-ddash">
-                                        <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Messages
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={AMessage} />
-                                            </div>
+                                        <div className="card-body p-4">
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/message"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Messages
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={AMessage} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 card-ddash">
-                                        <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Documents
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={ADocument} />
-                                            </div>
+                                        <div className="card-body p-4">
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/document"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Documents
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={ADocument} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +127,7 @@ function DashboardComplete() {
                                             <span className="pri-color fw-medium l-h">
                                                 IR-AP-1245
                                             </span>
-                                            <div className="rounded-pill me-2 px-3 py-1" style={{backgroundColor: "#8493C7"}}>
+                                            <div className="rounded-pill me-2 px-3 py-1" style={{ backgroundColor: "#8493C7" }}>
                                                 <span className="fw-medium text-white s-t">
                                                     Loading
                                                 </span>
@@ -169,7 +180,7 @@ function DashboardComplete() {
                                         </div>
                                     </div>
                                     <div className="position-absolute pos-card">
-                                        <div className="card bg-white border-0 px-1" style={{boxShadow: "0px 4px 16px #5469b122"}}>
+                                        <div className="card bg-white border-0 px-1" style={{ boxShadow: "0px 4px 16px #5469b122" }}>
                                             <div className="card-body">
                                                 <div className="row mb-3">
                                                     <div className="col col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start align-items-center gap-2">
@@ -185,10 +196,10 @@ function DashboardComplete() {
                                                     </div>
                                                     <div className="col col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center gap-3">
                                                         <img src={Truck} />
-                                                            <button className="btn btn-primary rounded-pill px-4 btn-msg" type="button">
-                                                                Message&nbsp;
-                                                                <img src={DMsg} />
-                                                            </button>
+                                                        <button className="btn btn-primary rounded-pill px-4 btn-msg" type="button">
+                                                            Message&nbsp;
+                                                            <img src={DMsg} />
+                                                        </button>
                                                     </div>
                                                 </div>
                                                 <div className="row">

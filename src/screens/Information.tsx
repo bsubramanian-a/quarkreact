@@ -11,7 +11,7 @@ function Information() {
             <div id="wrapper" className="d-flex vh-100">
                 <LeftNav />
                 <div className="d-flex flex-column" id="content-wrapper">
-                    <div id="content" className='bg-m'>
+                    <div id="content">
                         <TopMenu />
                         <div className="container-fluid mb-5">
                             <div className="row">

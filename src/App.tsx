@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Login from './screens/Login';
 import Register from './screens/Register';
+import ForgetPassword from './screens/ForgetPassword'
 import VerifyAccount from './screens/VerifyAccount';
 import Profile from './screens/Profile';
 import EditProfile from './screens/EditProfile';
@@ -16,6 +17,8 @@ import CargoInfo from './screens/CargoInfo';
 import Information from './screens/Information';
 import Document from './screens/Document';
 import CompletedOrder from './screens/CompletedOrder';
+import UserSettings from './screens/UserSettings';
+import ChangePassword from './screens/ChangePassword';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -26,6 +29,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/forget-password' element={<ForgetPassword/>}/>
         <Route path='/verify-account' element={<VerifyAccount/>}/>
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/edit-profile' element={<EditProfile/>}/>
@@ -40,6 +44,8 @@ function App() {
         <Route path='/information' element={<Information/>}/>
         <Route path='/document' element={<Document/>}/>
         <Route path='/completed-order' element={<CompletedOrder/>}/>
+        <Route path='/user-settings' element={<UserSettings/>}/>
+        <Route path='/change-password' element={<ChangePassword/>}/>
       </Routes>
     </div>
   );

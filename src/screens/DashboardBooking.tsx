@@ -37,54 +37,66 @@ function DashboardBooking() {
                                 <div className="col col-12 col-lg-3">
                                     <div className="card w-100 mb-3 card-dash">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Truck Information
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Vehicle} />
-                                            </div>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/truck-information"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Truck Information
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Vehicle} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 mb-3 acard-dash">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">
-                                                Booking information
-                                            </p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Information} />
-                                            </div>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/booking-information"}>
+                                                <p className="text-center l-h pri-color fw-medium">
+                                                    Booking information
+                                                </p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Information} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 mb-3 card-dash card-c">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">Cargo Information</p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Cargo} />
-                                            </div>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                                <p className="text-center l-h pri-color fw-medium">Cargo Information</p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Cargo} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 mb-3 card-dash card-c">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">Origin and Destination</p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Vehicle} />
-                                            </div>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                                <p className="text-center l-h pri-color fw-medium">Origin and Destination</p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Vehicle} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 mb-3 card-dash card-c">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">Messages</p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Message} />
-                                            </div>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                                <p className="text-center l-h pri-color fw-medium">Messages</p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Message} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="card w-100 card-dash card-c">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <p className="text-center l-h pri-color fw-medium">Documents</p>
-                                            <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
-                                                <img src={Document} />
-                                            </div>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                                <p className="text-center l-h pri-color fw-medium">Documents</p>
+                                                <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
+                                                    <img src={Document} />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -101,7 +113,7 @@ function DashboardBooking() {
                                             <span className="pri-color fw-medium l-h">
                                                 IR-AP-1245
                                             </span>
-                                            <div className="rounded-pill me-2 px-3 py-1" style={{backgroundColor: "#8493C7"}}>
+                                            <div className="rounded-pill me-2 px-3 py-1" style={{ backgroundColor: "#8493C7" }}>
                                                 <span className="pri-color fw-medium text-white s-t">
                                                     Loading
                                                 </span>
@@ -110,12 +122,12 @@ function DashboardBooking() {
                                         <div className="d-flex justify-content-start align-items-center mb-1">
                                             <div className="col col-4">
                                                 <span className="l-h fw-light pri-color">
-                                                    Freight 
+                                                    Freight
                                                 </span>
                                             </div>
                                             <div className="col col-8">
                                                 <span className="l-h fw-normal pri-color">
-                                                    Castic soda 
+                                                    Castic soda
                                                 </span>
                                             </div>
                                         </div>

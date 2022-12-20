@@ -104,9 +104,11 @@ function AddTruck() {
                                             <div className="row mb-5 justify-content-between align-items-center">
                                                 <div className="col col-12 col-lg-5"></div>
                                                 <div className="col col-12 col-lg-5">
-                                                    <button className="btn btn-primary w-100 px-4 py-3 rounded-pill fw-medium" type="button">
-                                                        Submit
-                                                    </button>
+                                                    <Link className='text-decoration-none btn-color' to={"/truck-information"}>
+                                                        <button className="btn btn-primary w-100 px-4 py-3 rounded-pill fw-medium" type="button">
+                                                            Submit
+                                                        </button>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -115,7 +117,7 @@ function AddTruck() {
                             </div>
                         </div>
                     </div>
-                </div><a className="border rounded d-inline scroll-to-top" href="#page-top"><i className="fas fa-angle-up"></i></a>
+                </div><Link to={"#page-top"} className="border rounded d-inline scroll-to-top"><i className="fas fa-angle-up"></i></Link>
             </div>
         </div>
     );

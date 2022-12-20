@@ -67,21 +67,17 @@ function TopMenu() {
                                     <span className="d-none d-lg-inline pri-color l-p">Valerie Luna</span>
                                 </Link>
                                 <div className="dropdown-menu shadow dropdown-menu-end animated--grow-in">
-                                    <Link to={"#"} className="dropdown-item">
-                                        <i className="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>
+                                    <Link to={"/user-settings"} className="dropdown-item btn-color">
+                                        <i className="fas fa-user fa-sm fa-fw me-2 btn-color"></i>
                                         Profile
                                     </Link>
-                                    <Link to={"#"}  className="dropdown-item">
-                                        <i className="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>
+                                    {/* <Link to={"/user-settings"}  className="dropdown-item btn-color">
+                                        <i className="fas fa-cogs fa-sm fa-fw me-2 btn-color"></i>
                                         Settings
-                                    </Link>
-                                    <Link to={"#"}  className="dropdown-item">
-                                        <i className="fas fa-list fa-sm fa-fw me-2 text-gray-400">
-                                        </i>Activity log
-                                    </Link>
+                                    </Link> */}
                                     <div className="dropdown-divider"></div>
-                                    <Link to={"#"} className="dropdown-item">
-                                        <i className="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>
+                                    <Link to={"/"} className="dropdown-item btn-color">
+                                        <i className="fas fa-sign-out-alt btn-color fa-sm fa-fw me-2"></i>
                                         Logout
                                     </Link>
                                 </div>

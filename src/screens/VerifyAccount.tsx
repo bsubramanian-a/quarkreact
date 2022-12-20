@@ -16,10 +16,18 @@ function VerifyAccount() {
                             </div>
                         </div>
                         <div className="row mb-0">
-                            <div className="col col-12">
+                            <div className="col mb-3 col-12">
                                 <Link to={"#"} className="fp-color rl-color text-decoration-none h-ss">
                                     Didn't get the email? Send it again
                                 </Link>
+                            </div>
+                            <div className="col col-12">
+                                <p className="mb-0 fw-normal c-color d-r">
+                                    Back to&nbsp;
+                                    <Link to={"/"} className="rl-color text-decoration-none">
+                                        Login
+                                    </Link>
+                                </p>
                             </div>
                         </div>
                     </div>
