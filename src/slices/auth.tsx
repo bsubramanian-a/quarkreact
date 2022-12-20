@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 import AuthService from "../services/auth.service";
 
-const coach = JSON.parse(localStorage.getItem("coach") || "{}");
+const user = JSON.parse(localStorage.getItem("user") || "{}");
 
 export const register = createAsyncThunk(
   "auth/register",
@@ -60,12 +60,24 @@ export const forget = createAsyncThunk(
   }
 );
 
-export const forgetotp = createAsyncThunk(
-  "auth/forgetotp",
-  async ({ email, otp }:any, thunkAPI) => {
-    console.log("otp coming in",otp);
+export const verifyEmail = createAsyncThunk(
+  "auth/forget",
+  async (email:string, thunkAPI) => {
     try {
-      const response = await AuthService.forgetotp(email, otp);
+      const response = await AuthService.verifyEmail(email);
+      return response.data;
+    } catch (error:any) {
+      return error.response;
+    }
+  }
+);
+
+export const resetpassword = createAsyncThunk(
+  "auth/forgetotp",
+  async ({ email, otp, password, confirmPassword }:any, thunkAPI) => {
+
+    try {
+      const response = await AuthService.resetpassword(email, otp, password, confirmPassword);
       return response;
     } catch (error:any) {
       return error.response;      
@@ -88,9 +100,9 @@ export const changepassword = createAsyncThunk(
   }
 );
 
-const initialState = coach
-  ? { isLoggedIn: true, coach }
-  : { isLoggedIn: false, coach: null };
+const initialState = user
+  ? { isLoggedIn: true, user }
+  : { isLoggedIn: false, user: null };
 
 const authSlice = createSlice({
   name: "auth",
@@ -108,47 +120,47 @@ const authSlice = createSlice({
 
     builder.addCase(otp.fulfilled, (state, action) => {
       state.isLoggedIn = true;
-      state.coach = action.payload.coach;
+      state.user = action.payload.user;
     });
 
     builder.addCase(otp.rejected, (state, action) => {
       state.isLoggedIn = false;
-      state.coach = null;
+      state.user = null;
     });
 
     builder.addCase(login.fulfilled, (state, action) => {
       state.isLoggedIn = false;
-      state.coach = null;
+      state.user = null;
     });
 
     builder.addCase(login.rejected, (state, action) => {
       state.isLoggedIn = false;
-      state.coach = null;
+      state.user = null;
     });
 
     builder.addCase(forget.fulfilled, (state, action) => {
       state.isLoggedIn = false;
-      state.coach = null;
+      state.user = null;
     });
 
     builder.addCase(forget.rejected, (state, action) => {
       state.isLoggedIn = false;
-      state.coach = null;
+      state.user = null;
     });
 
-    builder.addCase(forgetotp.fulfilled, (state, action) => {
+    builder.addCase(resetpassword.fulfilled, (state, action) => {
       state.isLoggedIn = false;
-      state.coach = null;
+      state.user = null;
     });
 
-    builder.addCase(forgetotp.rejected, (state, action) => {
+    builder.addCase(resetpassword.rejected, (state, action) => {
       state.isLoggedIn = false;
-      state.coach = null;
+      state.user = null;
     });
 
     builder.addCase(logout.fulfilled, (state) => {
       state.isLoggedIn = false;
-      state.coach = null;
+      state.user = null;
     });
   }
 });

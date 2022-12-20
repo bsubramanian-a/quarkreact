@@ -1,36 +1,48 @@
-import React, {useState} from 'react';
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import React, {useState, useEffect} from 'react';
+import { Link, Navigate, useNavigate, useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { forget } from "../slices/auth";
+import { resetpassword } from "../slices/auth";
 
-function ForgetPassword() {
+function ResetPassword() {
     let navigate = useNavigate();
-
+    const [searchParams, setSearchParams] = useSearchParams();
     const [isLoading, setIsLoading] = useState(false);
     const [errormessage, setErrorMessage] = useState();
-    const [email, setEmail] = useState();
+    const [email, setEmail] = useState('');
     const [isSent, setIsSent] = useState(false);
+    const [otp, setOtp] = useState('');
 
     const dispatch = useDispatch<any>();
 
+    useEffect(() => {
+        const email = searchParams.get("email");
+        const otp = searchParams.get("token");
+       console.log("otp", otp, "email", email);
+       setEmail(email ?? '');
+       setOtp(otp ?? '');
+    }, [searchParams]);
+
     const initialValues = {
-        email: "",
+        password: "",
+        confirmPassword: ""
     };
 
     const validationSchema = Yup.object().shape({
-        email: Yup.string()
-        .email("This is not a valid email.")
-        .required("This field is required!"),
+        password: Yup.string()
+            .required("This field is required!"),
+        confirmPassword: Yup.string()
+        .oneOf([Yup.ref('password'), null], 'Passwords must match')
     });
 
-    const handleForget = (formValue: any) => {
-        const { email } = formValue;
-        setEmail(email);
+    const handleReset = (formValue: any) => {
+        const { password, confirmPassword } = formValue;
+        console.log("password", password, 'confirm', confirmPassword)
+
         setIsLoading(true);
     
-        dispatch(forget(email))
+        dispatch(resetpassword({email, otp, password, confirmPassword}))
           .unwrap()
           .then((res: any) => {
             console.log("response coming in", res);
@@ -40,14 +52,13 @@ function ForgetPassword() {
             }
             if (res.status == "success") {
                 setIsSent(true);
-              setIsLoading(false);
+                setIsLoading(false);
             }
           })
           .catch(() => {
             setIsLoading(false);
           });
     };
-
       
     return (
         <div className="bg-white">
@@ -56,14 +67,17 @@ function ForgetPassword() {
                     <div className="container my-auto mx-md-5">
                         {
                             isSent && <div className="alert alert-success">
-                            Password change link has been sent to your email successfully.
-                        </div>
+                                Password changed successfully.
+                            </div>
                         }
+                        {errormessage && (
+                            <div className="alert alert-danger small border-0 py-1 mb-0"> {errormessage} </div>
+                        )}
                         
                         <Formik
                             initialValues={initialValues}
                             validationSchema={validationSchema}
-                            onSubmit={handleForget}
+                            onSubmit={handleReset}
                         >
                             <Form>
                                 <div className="row mb-5">
@@ -74,9 +88,21 @@ function ForgetPassword() {
                                 </div>
                                 <div className="row mb-3">
                                     <div className="col col-12">
-                                        <p className="mb-1 l-h l-color fw-normal">Email address</p><Field name="email" type="email" className="w-100 px-4 py-3 t-input" />
+                                        <p className="mb-1 l-h l-color fw-normal">Password</p>
+                                        <Field name="password" type="password" className="w-100 px-4 py-3 t-input" />
                                         <ErrorMessage
-                                            name="email"
+                                            name="password"
+                                            component="div"
+                                            className="alert alert-danger"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="row mb-3">
+                                    <div className="col col-12">
+                                        <p className="mb-1 l-h l-color fw-normal">Confirm Password</p>
+                                        <Field name="confirmPassword" type="password" className="w-100 px-4 py-3 t-input" />
+                                        <ErrorMessage
+                                            name="confirmPassword"
                                             component="div"
                                             className="alert alert-danger"
                                         />
@@ -85,7 +111,7 @@ function ForgetPassword() {
                                 <div className="row mb-4">
                                     <div className="col col-12">
                                     {isLoading ? (
-                                        <button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type='button'>Sending email</button>
+                                        <button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type='button'>Changing password</button>
                                         ): <button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type="submit">Submit</button>}
                                     </div>
                                 </div>
@@ -105,4 +131,4 @@ function ForgetPassword() {
     );
 }
 
-export default ForgetPassword;
+export default ResetPassword;

@@ -10,20 +10,27 @@ const register = (email:string, password:string, firstname:string, lastname:stri
 };
 
 const forget = (email:string) => {
-  return axios.post(API_URL + "coach-forget", {
+  return axios.post(API_URL + "forget-password", {
     email
   });
 };
 
-const forgetotp = (email:string, otp:number) => {
-  console.log("sending otp",otp);
-  return axios.post(API_URL + "coach-otp-forget", {
+const verifyEmail = (email:string) => {
+  return axios.post(API_URL + "verify-email", {
+    email
+  });
+};
+
+const resetpassword = (email:string, otp:number, password:string, confirmPassword:string) => {
+  return axios.post(API_URL + "reset-password", {
     email,
-    otp
+    otp,
+    password,
+    confirmPassword
   }).then((response) => {
     console.log("response from server", response);
     if (response.data.token) {
-      localStorage.setItem("coach", JSON.stringify(response.data.coach));
+      localStorage.setItem("user", JSON.stringify(response.data.user));
     }
     return response.data;
   });;
@@ -46,13 +53,13 @@ const login = (email:string, password:string) => {
 
 const otp = (email:string, otp:number) => {
   console.log("sending otp",otp);
-  return axios.post(API_URL + "coach-otp", {
+  return axios.post(API_URL + "user-otp", {
     email,
     otp
   }).then((response) => {
     console.log("response from server", response);
     if (response.data.token) {
-      localStorage.setItem("coach", JSON.stringify(response.data.coach));
+      localStorage.setItem("user", JSON.stringify(response.data.user));
     }
     return response.data;
   });;
@@ -62,14 +69,14 @@ const changepassword = (email:string, currentpassword:number, newpassword:number
   console.log("email1",email);
     console.log("currentpassword1",currentpassword);
     console.log("newpassword1",newpassword);
-  return axios.post(API_URL + "coach-change-password", {
+  return axios.post(API_URL + "user-change-password", {
     email,
     currentpassword,
     newpassword
   }, { headers: authHeader() }).then((response) => {
     console.log("response from server", response);
     if (response.data.token) {
-      localStorage.setItem("coach", JSON.stringify(response.data.coach));
+      localStorage.setItem("user", JSON.stringify(response.data.user));
       localStorage.setItem("accesstoken", JSON.stringify(response.data.token));
     }
     return response.data;
@@ -77,7 +84,7 @@ const changepassword = (email:string, currentpassword:number, newpassword:number
 };
 
 const logout = () => {
-  localStorage.removeItem("coach");
+  localStorage.removeItem("user");
 };
 
 const authService = {
@@ -86,8 +93,9 @@ const authService = {
   logout,
   otp,
   forget,
-  forgetotp,
-  changepassword
+  resetpassword,
+  changepassword,
+  verifyEmail
 };
 
 export default authService;

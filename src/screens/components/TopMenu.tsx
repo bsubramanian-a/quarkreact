@@ -2,8 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Notification from '../../assets/img/notification.svg'
 import Avatars from '../../assets/img/avatars/avatar1.jpeg'
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from '../../slices/auth';
 
 function TopMenu() {
+    const dispatch = useDispatch<any>();
+    const handleLogout = () => {
+        console.log("logout")
+        dispatch(logout());            
+    };
+
     return (
         <nav className="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
             <div className="container-fluid"><button className="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop-1" type="button"><i className="fas fa-bars"></i></button>
@@ -76,10 +84,10 @@ function TopMenu() {
                                         Settings
                                     </Link> */}
                                     <div className="dropdown-divider"></div>
-                                    <Link to={"/"} className="dropdown-item btn-color">
+                                    <span onClick={handleLogout} className="dropdown-item btn-color">
                                         <i className="fas fa-sign-out-alt btn-color fa-sm fa-fw me-2"></i>
                                         Logout
-                                    </Link>
+                                    </span>
                                 </div>
                             </div>
                         </li>

@@ -164,7 +164,11 @@ function Register() {
                                         <div>Registering...</div>
                                     )}
                                     {!isLoading && (
-                                        <div className="col col-12"><button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type="submit">Create account</button></div>
+                                        <div className="col col-12">
+                                            {isLoading ? (
+                                                <div>Registering...</div>
+                                            ): <button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type="submit">Create account</button>}
+                                        </div>
                                     )}
                                 </div>
                             </div>

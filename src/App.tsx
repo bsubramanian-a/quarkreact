@@ -19,6 +19,7 @@ import Document from './screens/Document';
 import CompletedOrder from './screens/CompletedOrder';
 import UserSettings from './screens/UserSettings';
 import ChangePassword from './screens/ChangePassword';
+import ResetPassword from './screens/ResetPassword';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -46,6 +47,7 @@ function App() {
         <Route path='/completed-order' element={<CompletedOrder/>}/>
         <Route path='/user-settings' element={<UserSettings/>}/>
         <Route path='/change-password' element={<ChangePassword/>}/>
+        <Route path='/reset-password' element={<ResetPassword/>}/>
       </Routes>
     </div>
   );

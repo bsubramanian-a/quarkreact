@@ -11,6 +11,7 @@ function Login() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [verify, setVerify] = useState('');
     const { isLoggedIn } = useSelector((state: any) => state.auth);
+    console.log("islogged", isLoggedIn);
 
     const [isLoading, setIsLoading] = useState(false);
     const [email, setEmail] = useState();
@@ -60,9 +61,9 @@ function Login() {
             .required("This field is required!")
     });
 
-    if (isLoggedIn) {
-        return <Navigate to="/profile" />;
-    }
+    // if (isLoggedIn) {
+    //     return <Navigate to="/profile" />;
+    // }
 
     return (
         <div className="bg-white">
@@ -109,11 +110,15 @@ function Login() {
                                         <div className="form-check">
                                             <Field className="form-check-input" name="remember" type="checkbox" id="formCheck-1" />
                                             <label className="form-check-label l-h c-color">Remember me</label>
-                                        </div><Link to={"#"} className="text-decoration-none l-h fp-color">Forgot your passwords?</Link>
+                                        </div><Link to={"/forget-password"} className="text-decoration-none l-h fp-color">Forgot your passwords?</Link>
                                     </div>
                                 </div>
                                 <div className="row mb-4">
-                                    <div className="col col-12"><button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type="submit">Login</button></div>
+                                    <div className="col col-12">
+                                        {isLoading ? (
+                                            <div>Logging in...</div>
+                                        ): <button className="btn btn-primary w-100 rounded-pill py-3 fw-bold" type="submit">Login</button>}
+                                    </div>
                                 </div>
                                 <div className="row">
                                     <div className="col col-12">
