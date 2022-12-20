@@ -16,7 +16,7 @@ function Login() {
     const [isLoading, setIsLoading] = useState(false);
     const [email, setEmail] = useState();
     const [isError, setIsError] = useState(false);
-    const [errormessage, setErrorMessage] = useState();
+    const [errormessage, setErrorMessage] = useState('');
     const dispatch = useDispatch<any>();
 
     useEffect(() => {
@@ -32,18 +32,23 @@ function Login() {
         dispatch(login({ email, password }))
             .unwrap()
             .then((res: any) => {
-                console.log("response coming in", res);
-                if (res.status == 401) {
+                console.log("res", res);
+                if (res?.data?.status == 409) {
                     setIsLoading(false);
-                    setErrorMessage(res.data.status);
+                    setErrorMessage(res.data.message);
+                    console.log('error msg', errormessage);
                     setIsError(true);
-                }
-                if (res.status == "success") {
+                }else if (res.status == 200) {
                     setIsLoading(false);
-                    navigate('')
+                    navigate('/')
+                }else{
+                    setIsLoading(false);
+                    setErrorMessage("Please try again");
                 }
             })
-            .catch(() => {
+            .catch((error:any) => {
+                console.log("login error", error)
+                setErrorMessage(error.data.message);
                 setIsLoading(false);
             });
     };
@@ -70,9 +75,10 @@ function Login() {
             <div className="row vh-100 mx-0">
                 <div className="col col-12 col-lg-6 mt-5 mt-lg-0 mb-4 mb-lg-0 d-flex justify-content-center">
                     <div className="container my-auto mx-md-5">
-                        {verify && <div>
+                        {verify && <div className='alert alert-danger'>
                             {verify == 'false' ? 'Verification failed please try again!' : 'Verification successfull, please login!'}
                         </div>}
+                        {errormessage && <div className='alert alert-danger'>{errormessage}</div>}
                         <Formik
                             initialValues={initialValues}
                             validationSchema={validationSchema}

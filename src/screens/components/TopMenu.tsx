@@ -8,7 +8,7 @@ import { logout } from '../../slices/auth';
 function TopMenu() {
     const dispatch = useDispatch<any>();
     const { isLoggedIn } = useSelector((state: any) => state.auth);
-    console.log("islogged", isLoggedIn);
+    console.log("isloggedtop", isLoggedIn);
     let navigate = useNavigate();
     const handleLogout = () => {
         console.log("logout")

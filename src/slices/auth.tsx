@@ -13,7 +13,7 @@ export const register = createAsyncThunk(
       const response = await AuthService.register(email, password, firstname, lastname);
       return response.data;
     } catch (error:any) {
-      return error.response;
+      return thunkAPI.rejectWithValue(error.response); 
     }
   }
 );
@@ -23,9 +23,16 @@ export const login = createAsyncThunk(
   async ({ email, password }:any, thunkAPI) => {
     try {
       const response = await AuthService.login(email, password);
+      console.log("login res auth", response);
+      // if(response.status  != 200){
+      //   return thunkAPI.rejectWithValue(response);
+      // }else{
+      //   return response;
+      // }
       return response;
     } catch (error:any) {
-      return error.response;      
+      console.log("error", error)
+      return thunkAPI.rejectWithValue(error.response); 
     }
   }
 );
@@ -55,7 +62,7 @@ export const forget = createAsyncThunk(
       const response = await AuthService.forget(email);
       return response.data;
     } catch (error:any) {
-      return error.response;
+      return thunkAPI.rejectWithValue(error.response); 
     }
   }
 );
@@ -67,7 +74,7 @@ export const verifyEmail = createAsyncThunk(
       const response = await AuthService.verifyEmail(email);
       return response.data;
     } catch (error:any) {
-      return error.response;
+      return thunkAPI.rejectWithValue(error.response); 
     }
   }
 );
@@ -80,7 +87,7 @@ export const resetpassword = createAsyncThunk(
       const response = await AuthService.resetpassword(email, otp, password, confirmPassword);
       return response;
     } catch (error:any) {
-      return error.response;      
+      return thunkAPI.rejectWithValue(error.response); 
     }
   }
 );
@@ -95,7 +102,7 @@ export const changepassword = createAsyncThunk(
       const response = await AuthService.changepassword(email, currentpassword,newpassword);
       return response;
     } catch (error:any) {
-      return error.response;      
+      return thunkAPI.rejectWithValue(error.response); 
     }
   }
 );

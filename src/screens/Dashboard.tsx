@@ -21,7 +21,7 @@ function Dashboard() {
                             <div className="row">
                                 <div className="col col-12 col-lg-3">
                                     <p className="l-h pri-color text-center fw-medium">
-                                        Ongoing orders
+                                        Ongoing orders 
                                     </p>
                                     <form className="mb-4">
                                         <div className="input-group w-100">

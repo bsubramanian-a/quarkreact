@@ -11,7 +11,8 @@ function Register() {
     const [successful, setSuccessful] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [emailExist, setEmailExist] = useState(false);
-
+    const [errormessage, setErrorMessage] = useState();
+    
     //const { message } = useSelector((state) => state?.message);
     const dispatch = useDispatch<any>();
 
@@ -38,7 +39,6 @@ function Register() {
 
         setSuccessful(false);
         setIsLoading(true);
-        console.log("handle register", email, password, firstname, lastname)
 
         dispatch(register({email, password, firstname, lastname}))
             .unwrap()
@@ -47,11 +47,12 @@ function Register() {
                 if (res.status == 409) {
                     setIsLoading(false);
                     setSuccessful(false);
-                    setEmailExist(true);
+                    setErrorMessage(res.message);
                 }
-                if (res.status == "success") {
+                if (res.status == 200) {
                     setIsLoading(false);
                     setSuccessful(true);    
+                    setErrorMessage(res.message);
                     navigate('/verify-account');                
                 }                
             })
@@ -119,8 +120,8 @@ function Register() {
                                             component="div"
                                             className="alert alert-danger small border-0 py-1 mb-0"
                                         />
-                                        {emailExist && (
-                                            <div className="alert alert-danger small border-0 py-1 mb-0"> Email already exist </div>
+                                        {errormessage && (
+                                            <div className="alert alert-danger small border-0 py-1 mb-0"> {errormessage} </div>
                                         )}
                                     </div>
                                 </div>
