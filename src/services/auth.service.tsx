@@ -3,9 +3,9 @@ import authHeader from "./auth-header";
 
 const API_URL = "http://localhost:8000/api/v1/users/";
 
-const register = (email:string) => {
-  return axios.post(API_URL + "create-coach", {
-    email
+const register = (email:string, password:string, firstname:string, lastname:string) => {
+  return axios.post(API_URL + "create-user", {
+    email, password, firstname, lastname
   });
 };
 
@@ -31,7 +31,7 @@ const forgetotp = (email:string, otp:number) => {
 
 const login = (email:string, password:string) => {
   return axios
-    .post(API_URL + "coach-login", {
+    .post(API_URL + "login-user", {
       email,
       password
     })
