@@ -55,8 +55,9 @@ function ResetPassword() {
                 setIsLoading(false);
             }
           })
-          .catch(() => {
+          .catch((error:any) => {
             setIsLoading(false);
+            setErrorMessage(error.data.status);
           });
     };
       

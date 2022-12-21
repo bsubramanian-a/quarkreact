@@ -44,6 +44,7 @@ function ForgetPassword() {
             }
           })
           .catch((error:any) => {
+            console.log("forget res", error);
             setErrorMessage(error.data.status);
             setIsLoading(false);
           });
@@ -60,7 +61,7 @@ function ForgetPassword() {
                             Password change link has been sent to your email successfully.
                         </div>
                         }
-                        
+                        {errormessage && <div className='alert alert-danger'>{errormessage}</div>}
                         <Formik
                             initialValues={initialValues}
                             validationSchema={validationSchema}

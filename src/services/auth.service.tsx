@@ -13,7 +13,9 @@ const register = (email:string, password:string, firstname:string, lastname:stri
 const forget = (email:string) => {
   return axios.post(API_URL + "forget-password", {
     email
-  });
+  }).then((response) => {
+    return response.data;
+  });;
 };
 
 const verifyEmail = (email:string) => {
@@ -44,10 +46,6 @@ const login = (email:string, password:string) => {
       password
     })
     .then((response) => {
-      //console.log("response from server", response);
-      // if (response.data.accessToken) {
-      //   localStorage.setItem("user", JSON.stringify(response.data));
-      // }
       return response.data;
     });
 };

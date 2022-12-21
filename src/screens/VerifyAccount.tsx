@@ -47,10 +47,11 @@ function VerifyAccount() {
                 setIsSent(true);
                 setIsLoading(false);
             }
-          })
-          .catch(() => {
+        })
+        .catch((error:any) => {
             setIsLoading(false);
-          });
+            setErrorMessage(error.data.status);
+        });
     }
 
     return (

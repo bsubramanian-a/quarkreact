@@ -24,11 +24,6 @@ export const login = createAsyncThunk(
     try {
       const response = await AuthService.login(email, password);
       console.log("login res auth", response);
-      // if(response.status  != 200){
-      //   return thunkAPI.rejectWithValue(response);
-      // }else{
-      //   return response;
-      // }
       return response;
     } catch (error:any) {
       console.log("error", error)
@@ -128,7 +123,6 @@ const authSlice = createSlice({
     });
 
     builder.addCase(otp.fulfilled, (state, action) => {
-      console.log("1");
       state.isLoggedIn = true;
       state.user = action.payload.user;
     });
