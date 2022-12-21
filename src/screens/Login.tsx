@@ -36,7 +36,6 @@ function Login() {
                 if (res?.data?.status == 409) {
                     setIsLoading(false);
                     setErrorMessage(res.data.message);
-                    console.log('error msg', errormessage);
                     setIsError(true);
                 }else if (res.status == 200) {
                     setIsLoading(false);
@@ -49,6 +48,7 @@ function Login() {
             .catch((error:any) => {
                 console.log("login error", error)
                 setErrorMessage(error.data.message);
+                setIsError(true);
                 setIsLoading(false);
             });
     };

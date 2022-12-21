@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import LeftNav from './components/LeftNav';
 import TopMenuStart from './components/TopMenuStart';
+import ContactInput from './components/PhoneInput';
 
 function Profile() {
     return (
@@ -34,13 +35,13 @@ function Profile() {
                                                 </div>
                                                 <div className="col col-12 col-lg-5">
                                                     <p className="mb-1 l-h l-color fw-normal">Managing Director Phone Number </p>
-                                                    <input type="text" className="w-100 px-4 py-3 t-input" />
+                                                    <ContactInput></ContactInput>
                                                 </div>
                                             </div>
                                             <div className="row mb-5 justify-content-between align-items-center">
                                                 <div className="col col-12 col-lg-5">
                                                     <p className="mb-1 l-h l-color fw-normal">Number of Trucks (Company Ownership)</p>
-                                                    <input type="text" className="w-100 px-4 py-3 t-input" />
+                                                    <input type="number" min="1" max="1000" className="w-100 px-4 py-3 t-input" />
                                                 </div>
                                                 <div className="col col-12 col-lg-5">
                                                     <p className="mb-1 l-h l-color fw-normal">Operator name </p>
@@ -50,17 +51,17 @@ function Profile() {
                                             <div className="row mb-5 justify-content-between align-items-center">
                                                 <div className="col col-12 col-lg-5">
                                                     <p className="mb-1 l-h l-color fw-normal">Number of Trucks (Company Partnership)</p>
-                                                    <input type="text" className="w-100 px-4 py-3 t-input" />
+                                                    <input type="number" min="1" max="1000" className="w-100 px-4 py-3 t-input" />
                                                 </div>
                                                 <div className="col col-12 col-lg-5">
                                                     <p className="mb-1 l-h l-color fw-normal">Operator Phone Number </p>
-                                                    <input type="text" className="w-100 px-4 py-3 t-input" />
+                                                    <ContactInput></ContactInput>
                                                 </div>
                                             </div>
                                             <div className="row mb-5 justify-content-between align-items-center">
                                                 <div className="col col-12 col-lg-5">
                                                     <p className="mb-1 l-h l-color fw-normal">Company Contact number </p>
-                                                    <input type="text" className="w-100 px-4 py-3 t-input" />
+                                                    <ContactInput></ContactInput>
                                                 </div>
                                                 <div className="col col-12 col-lg-5">
                                                     <p className="mb-1 l-h l-color fw-normal">Overseas Agent </p>
@@ -74,7 +75,7 @@ function Profile() {
                                                 </div>
                                                 <div className="col col-12 col-lg-5">
                                                     <p className="mb-1 l-h l-color fw-normal">Overseas Agent Phone Number </p>
-                                                    <input type="text" className="w-100 px-4 py-3 t-input" />
+                                                    <ContactInput></ContactInput>
                                                 </div>
                                             </div>
                                             <div className="row mb-5 justify-content-between align-items-center">

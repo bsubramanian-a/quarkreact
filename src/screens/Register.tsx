@@ -56,8 +56,10 @@ function Register() {
                     navigate('/verify-account');                
                 }                
             })
-            .catch(() => {
+            .catch((error:any) => {
+                setIsLoading(false);
                 setSuccessful(false);
+                setErrorMessage(error.data.message);
             });
     };
 

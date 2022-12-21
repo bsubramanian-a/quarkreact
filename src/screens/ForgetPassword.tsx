@@ -43,7 +43,8 @@ function ForgetPassword() {
               setIsLoading(false);
             }
           })
-          .catch(() => {
+          .catch((error:any) => {
+            setErrorMessage(error.data.status);
             setIsLoading(false);
           });
     };
