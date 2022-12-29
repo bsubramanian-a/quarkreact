@@ -20,7 +20,7 @@ import CompletedOrder from './screens/CompletedOrder';
 import UserSettings from './screens/UserSettings';
 import ChangePassword from './screens/ChangePassword';
 import ResetPassword from './screens/ResetPassword';
-
+import Verified from './screens/Verified';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -29,6 +29,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<Login/>}/>
+        <Route path='/verify-user' element={<Verified/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/forget-password' element={<ForgetPassword/>}/>
         <Route path='/verify-account' element={<VerifyAccount/>}/>
