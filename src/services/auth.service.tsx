@@ -41,7 +41,7 @@ const resetpassword = (email:string, otp:number, password:string, confirmPasswor
 
 const login = (email:string, password:string) => {
   return axios
-    .post(API_URL + "login-user", {
+    .post(API_URL + "login-transporter", {
       email,
       password
     })
