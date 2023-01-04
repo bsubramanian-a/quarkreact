@@ -1,8 +1,8 @@
 import axios from "axios";
 import authHeader from "./auth-header";
 
-const API_URL = "http://localhost:8000/api/v1/users/";
-// const API_URL = "https://quark-api-141h.onrender.com/api/v1/users/";
+// const API_URL = "http://localhost:8000/api/v1/users/";
+const API_URL = "https://quark-api-141h.onrender.com/api/v1/users/";
 
 const register = (email:string, password:string, firstname:string, lastname:string) => {
   return axios.post(API_URL + "create-transporter", {
