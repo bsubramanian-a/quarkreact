@@ -1,11 +1,16 @@
 import React from 'react';
+import DataTable from './DataTable';
 import InTab from './InTab';
 
 function BookingInfoTab() {
     return (
         <div className="tab-pane  active" role="tabpanel" id="tab-1">
             <InTab />
-            <div className="row mb-5">
+            <div>
+
+                <DataTable/>
+            </div>
+            {/* <div className="row mb-5">
                 <div className="col">
                     <div className="table-responsive" style={{boxShadow: "0px 2px 8px #0a288f12"}}>
                         <table className="table mb-0">
@@ -112,7 +117,7 @@ function BookingInfoTab() {
                         </table>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
