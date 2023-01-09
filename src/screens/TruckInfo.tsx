@@ -7,8 +7,21 @@ import BookImg from '../assets/img/order-img/bookInfo.svg';
 import Printer from '../assets/img/truck-img/printer.svg';
 import Edit from '../assets/img/truck-img/edit.svg';
 import Delete from '../assets/img/truck-img/delete.svg';
+import { useGetTrucksQuery } from '../services/truck-service';
 
 function TruckInfo() {
+    const { data: trucks = [], isLoading, isFetching, isError, error }:any = useGetTrucksQuery(1);
+    // console.log("trucks", trucks);
+
+    if (isLoading || isFetching) {
+        return <div>loading...</div>;
+    }
+
+    if (isError) {
+        console.log({ error });
+        return <div>{error?.status}</div>;
+    }
+
     return (
         <div id="page-top" className='bg-white'>
             <div id="wrapper" className="d-flex vh-100">

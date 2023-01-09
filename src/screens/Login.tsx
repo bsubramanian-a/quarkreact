@@ -69,7 +69,7 @@ function Login() {
     if (isLoggedIn) {
         return <Navigate to="/profile" />;
     }
-
+    
     return (
         <div className="bg-white">
             <div className="row vh-100 mx-0">

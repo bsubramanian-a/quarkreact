@@ -46,6 +46,7 @@ const login = (email:string, password:string) => {
       password
     })
     .then((response) => {
+      localStorage.setItem("accesstoken", JSON.stringify(response.data.token));
       return response.data;
     });
 };

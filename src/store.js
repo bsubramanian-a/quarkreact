@@ -1,15 +1,19 @@
 import { configureStore } from '@reduxjs/toolkit'
 import authReducer from "./slices/auth";
-//import messageReducer from "./slices/message";
+import { companyApi } from './services/company-service';
+import { truckApi } from './services/truck-service';
+import { setupListeners } from '@reduxjs/toolkit/query';
 
 const reducer = {
   auth: authReducer,
-  //message: messageReducer
+  [companyApi.reducerPath]: companyApi.reducer,
+  [truckApi.reducerPath]: truckApi.reducer,
 }
 
-const store = configureStore({
+export const store = configureStore({
   reducer: reducer,
-  devTools: true,
-})
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(truckApi.middleware, companyApi.middleware),
+});
 
-export default store;
+setupListeners(store.dispatch);
