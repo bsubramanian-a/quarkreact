@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import LeftNav from './components/LeftNav';
@@ -13,28 +13,35 @@ function Profile() {
     const [ createCompany, {isLoading} ]:any = useCreateCompanyMutation();
     const { data: companies = [], isFetching, isError, error }:any = useGetCompanyQuery(1);
     const [isEditable, setIsEditable] = useState(false);
-    const [mdPhone, setMdPhone] = useState('');
+    const [mdPhone, setMdPhone] = useState(null);
     const [companyPhone, setCompanyPhone] = useState(null);
     const [opPhone, setOpPhone] = useState(null);
     const [agentPhone, setAgentPhone] = useState(null);
     const [errMsg, setErrMsg] = useState('');
 
     const initialValues = {
-        name: "",
-        address: "",
-        reg_no: "",
-        trucks_owned: "",
-        trucks_partnership: "",
-        phone_number: "",
-        md: "",
-        md_phone: "",
-        op: "",
-        op_phone: "",
-        overseas_agent: "",
-        overseas_agent_phone: "",
-        latitude: 0,
-        longitude: 0
+        name: companies?.name || "",
+        address: companies?.address || "",
+        reg_no: companies?.reg_no || "",
+        trucks_owned: companies?.trucks_owned || "",
+        trucks_partnership: companies?.trucks_partnership || "",
+        phone_number: companies?.phone_number || "",
+        md: companies?.md || "",
+        md_phone: companies?.md_phone || "",
+        op: companies?.op || "",
+        op_phone: companies?.op_phone || "",
+        overseas_agent: companies?.overseas_agent || "",
+        overseas_agent_phone: companies?.overseas_agent_phone || "",
+        latitude: companies?.latitude || 0,
+        longitude: companies?.longitude || 0,
     };
+
+    useEffect(() => {
+        setAgentPhone(companies?.overseas_agent_phone || '91');
+        setCompanyPhone(companies?.phone_number || '91');
+        setOpPhone(companies?.op_phone || '91');
+        setMdPhone(companies?.md_phone || '91');
+    }, [companies])
 
     const validationSchema = Yup.object().shape({
         name: Yup.string()
@@ -196,10 +203,15 @@ function Profile() {
                                                     <div className="row mb-5 justify-content-between align-items-center">
                                                         <div className="col col-12 col-lg-5"></div>
                                                         <div className="col col-12 col-lg-5">
-                                                            <button className="btn btn-primary w-100 px-4 py-3 rounded-pill fw-medium" type="submit">
-                                                                {/* {isLoading ? "Updating..." : (companies?.length == 0 ? 'Submit' : (isEditable ? "Update Profile" : "Edit Profile"))} */}
-                                                                {isLoading ? "Updating..." : "Submit"}
-                                                            </button>
+                                                            {(companies?.name && !isEditable) ? 
+                                                                <span className="btn btn-primary w-100 px-4 py-3 rounded-pill fw-medium" onClick={() => {setIsEditable(true)}}>
+                                                                    Edit Profile
+                                                                </span>
+                                                                 :
+                                                                <button className="btn btn-primary w-100 px-4 py-3 rounded-pill fw-medium" type="submit">
+                                                                    {isLoading ? "Updating..." : "Submit"}
+                                                                </button>
+                                                            }
                                                         </div>
                                                     </div>
                                                 </div>

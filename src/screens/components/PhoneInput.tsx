@@ -17,8 +17,8 @@ function ContactInput({phone, setPhone}:any) {
         <>
             <PhoneInput
                 country={'us'}
-                value={phone}
-                onChange={(phone, country:any) => {setPhone(country?.dialCode+phone)}}
+                // value={phone}
+                onChange={(phone:any) => setPhone(phone)}
                 containerClass={"t-input"}
                 inputClass={'w-100'}
                 buttonStyle={{borderRadius: 8, outline: 'none',     top: '6px',

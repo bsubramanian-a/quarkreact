@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import authHeader from './auth-header';
 
-// const baseUrl = 'http://localhost:8000/api/v1/';
-const baseUrl = 'https://quark-api-141h.onrender.com/api/v1/';
+// const baseUrl = 'http://localhost:8000/api/v1/trucks';
+const baseUrl = 'https://quark-api-141h.onrender.com/api/v1/trucks';
 
 export const truckApi = createApi({
     reducerPath: 'truckApi',
@@ -27,7 +27,7 @@ export const truckApi = createApi({
             query: (data) => ({
                 url: `create-truck`,
                 method: 'POST',
-                body: { data },
+                body: data ,
             }),
             invalidatesTags: ['Trucks'],
         }),

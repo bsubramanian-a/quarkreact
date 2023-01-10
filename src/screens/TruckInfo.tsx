@@ -8,19 +8,42 @@ import Printer from '../assets/img/truck-img/printer.svg';
 import Edit from '../assets/img/truck-img/edit.svg';
 import Delete from '../assets/img/truck-img/delete.svg';
 import { useGetTrucksQuery } from '../services/truck-service';
+import DataTable from './components/DataTable';
 
 function TruckInfo() {
     const { data: trucks = [], isLoading, isFetching, isError, error }:any = useGetTrucksQuery(1);
-    // console.log("trucks", trucks);
+    console.log("trucks", trucks);
 
     if (isLoading || isFetching) {
-        return <div>loading...</div>;
+        return <div className='loading_text'>loading...</div>;
     }
 
     if (isError) {
         console.log({ error });
         return <div>{error?.status}</div>;
     }
+
+    const header = [
+        { title: "Truck Number", prop: "truck_no" },
+        { title: "Driver Name", prop: "driver_name" },
+        { title: "Phone number", prop: "phone_number" },
+        { title: "ID Number", prop: "id_no" },
+        { title: "Transit number", prop: "transit_no" },
+        { title: "Loading time", prop: "loading_time" },
+        { title: "Document", prop: "documents" },
+    ];
+
+    // const body = data.map((item: any) => {
+    //     return {
+    //         name: item.name,
+    //         booking_no: item.booking_no,
+    //         client_name: item.client_name,
+    //         client_phone: item.client_phone,
+    //         date_of_booking: item.date_of_booking,
+    //         payment_id: item.payment_id,
+    //         no_of_trucks: item.no_of_trucks,
+    //     };
+    // });
 
     return (
         <div id="page-top" className='bg-white'>
@@ -51,7 +74,7 @@ function TruckInfo() {
                             <div className="row mb-5">
                                 <div className="col">
                                     <div className="table-responsive" style={{ boxShadow: "0px 2px 8px #0a288f12" }}>
-                                        <table className="table mb-0">
+                                        {/* <table className="table mb-0">
                                             <thead>
                                                 <tr className="pri-color l-h fw-normal">
                                                     <th className="border-0 bg-white py-3">Truck Number</th>
@@ -101,7 +124,9 @@ function TruckInfo() {
                                                     <td className="py-4 border-0 bg-white"></td>
                                                 </tr>
                                             </tbody>
-                                        </table>
+                                        </table> */}
+
+                                        <DataTable header={header} data={trucks?.data}/>
                                     </div>
                                 </div>
                             </div>
