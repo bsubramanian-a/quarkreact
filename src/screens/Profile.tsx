@@ -101,7 +101,7 @@ function Profile() {
                                                 <div className="card-body px-lg-5 mx-lg-5">
                                                     {errMsg && <div className="alert alert-danger small border-0 py-1 mb-0">{errMsg}</div>}
                                                     <div className="row mb-5 justify-content-between align-items-center">
-                                                        <div className="col col-12 col-lg-5">
+                                                        <div className="col col-12 col-lg-5 mb-5 mb-lg-0">
                                                             <p className="mb-1 l-h l-color fw-normal">Company name</p>
                                                             <Field type="text" name='name' className="w-100 px-4 py-3 t-input" />
                                                             <ErrorMessage
@@ -111,7 +111,7 @@ function Profile() {
                                                             />
                                                         </div>
                                                         <div className="col col-12 col-lg-5">
-                                                            <p className="mb-1 l-h l-color fw-normal">Managing Director </p>
+                                                            <p className="mb-1 l-h l-color fw-normal">Managing Director Full Name</p>
                                                             <Field type="text" name='md' className="w-100 px-4 py-3 t-input" />
                                                             <ErrorMessage
                                                                 name="md"
@@ -121,7 +121,7 @@ function Profile() {
                                                         </div>
                                                     </div>
                                                     <div className="row mb-5 justify-content-between align-items-center">
-                                                        <div className="col col-12 col-lg-5">
+                                                        <div className="col col-12 col-lg-5 mb-5 mb-lg-0">
                                                             <p className="mb-1 l-h l-color fw-normal">Registration Number</p>
                                                             <Field type="text" name='reg_no' className="w-100 px-4 py-3 t-input" />
                                                             <ErrorMessage
@@ -136,7 +136,7 @@ function Profile() {
                                                         </div>
                                                     </div>
                                                     <div className="row mb-5 justify-content-between align-items-center">
-                                                        <div className="col col-12 col-lg-5">
+                                                        <div className="col col-12 col-lg-5 mb-5 mb-lg-0">
                                                             <p className="mb-1 l-h l-color fw-normal">Number of Trucks (Company Ownership)</p>
                                                             <Field type="number" name='trucks_owned' min="1" max="1000" className="w-100 px-4 py-3 t-input" />
                                                             <ErrorMessage
@@ -146,7 +146,7 @@ function Profile() {
                                                             />
                                                         </div>
                                                         <div className="col col-12 col-lg-5">
-                                                            <p className="mb-1 l-h l-color fw-normal">Operator name </p>
+                                                            <p className="mb-1 l-h l-color fw-normal">Operator Full Name</p>
                                                             <Field type="text" name='op' className="w-100 px-4 py-3 t-input" />
                                                             <ErrorMessage
                                                                 name="op"
@@ -156,7 +156,7 @@ function Profile() {
                                                         </div>
                                                     </div>
                                                     <div className="row mb-5 justify-content-between align-items-center">
-                                                        <div className="col col-12 col-lg-5">
+                                                        <div className="col col-12 col-lg-5 mb-5 mb-lg-0">
                                                             <p className="mb-1 l-h l-color fw-normal">Number of Trucks (Company Partnership)</p>
                                                             <Field type="number" name='trucks_partnership' min="1" max="1000" className="w-100 px-4 py-3 t-input" />
                                                             <ErrorMessage
@@ -171,7 +171,7 @@ function Profile() {
                                                         </div>
                                                     </div>
                                                     <div className="row mb-5 justify-content-between align-items-center">
-                                                        <div className="col col-12 col-lg-5">
+                                                        <div className="col col-12 col-lg-5 mb-5 mb-lg-0">
                                                             <p className="mb-1 l-h l-color fw-normal">Company Contact number </p>
                                                             <ContactInput phone={companyPhone} setPhone={setCompanyPhone}></ContactInput>
                                                         </div>
@@ -186,7 +186,7 @@ function Profile() {
                                                         </div>
                                                     </div>
                                                     <div className="row mb-5 justify-content-between align-items-center">
-                                                        <div className="col col-12 col-lg-5">
+                                                        <div className="col col-12 col-lg-5 mb-5 mb-lg-0">
                                                             <p className="mb-1 l-h l-color fw-normal">Company Address </p>
                                                             <Field type="text" name='address' className="w-100 px-4 py-3 t-input" />
                                                             <ErrorMessage
@@ -198,6 +198,39 @@ function Profile() {
                                                         <div className="col col-12 col-lg-5">
                                                             <p className="mb-1 l-h l-color fw-normal">Overseas Agent Phone Number </p>
                                                             <ContactInput phone={agentPhone} setPhone={setAgentPhone}></ContactInput>
+                                                        </div>
+                                                    </div>
+                                                    <div className="row mb-5 justify-content-between align-items-center">
+                                                        <div className="col col-12 col-lg-5 mb-5 mb-lg-0">
+                                                            <p className="mb-1 l-h l-color fw-normal">Country </p>
+                                                            <Field type="text" name='address' className="w-100 px-4 py-3 t-input" />
+                                                            <ErrorMessage
+                                                                name="address"
+                                                                component="div"
+                                                                className="alert alert-danger small border-0 py-1 mb-0"
+                                                            />
+                                                        </div>
+                                                        <div className="col col-12 col-lg-5 mb-5 mb-lg-0">
+                                                            <p className="mb-1 l-h l-color fw-normal">City </p>
+                                                            <Field type="text" name='address' className="w-100 px-4 py-3 t-input" />
+                                                            <ErrorMessage
+                                                                name="address"
+                                                                component="div"
+                                                                className="alert alert-danger small border-0 py-1 mb-0"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div className="row mb-5 justify-content-between align-items-center">
+                                                        <div className="col col-12 col-lg-5 mb-5 mb-lg-0">
+                                                            <p className="mb-1 l-h l-color fw-normal">Postal Code </p>
+                                                            <Field type="text" name='address' className="w-100 px-4 py-3 t-input" />
+                                                            <ErrorMessage
+                                                                name="address"
+                                                                component="div"
+                                                                className="alert alert-danger small border-0 py-1 mb-0"
+                                                            />
+                                                        </div>
+                                                        <div className="col col-12 col-lg-5 mb-5 mb-lg-0">
                                                         </div>
                                                     </div>
                                                     <div className="row mb-5 justify-content-between align-items-center">
