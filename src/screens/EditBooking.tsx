@@ -26,7 +26,7 @@ function EditBooking() {
                             </div>
                             <div className="row">
                                 <div className="col">
-                                    <div className="card px-lg-5" style={{backgroundColor: "#F4F7FA", border: "1px solid #F4F7FA"}}>
+                                    <div className="card px-lg-5" style={{ backgroundColor: "#F4F7FA", border: "1px solid #F4F7FA" }}>
                                         <div className="card-body px-lg-5 mx-lg-5 py-lg-5">
                                             <div className="row mb-5 justify-content-between align-items-center">
                                                 <div className="col col-12 col-lg-5">
@@ -81,7 +81,9 @@ function EditBooking() {
                                             </div>
                                             <div className="row justify-content-between align-items-center mb-3">
                                                 <div className="col col-12 col-lg-5"></div>
-                                                <div className="col col-12 col-lg-5"><button className="btn btn-primary w-100 px-4 py-3 rounded-pill fw-medium" type="button">EDIT</button></div>
+                                                <div className="col col-12 col-lg-5">
+                                                    <button className="btn btn-primary w-100 px-4 py-3 rounded-pill fw-medium" type="button">EDIT</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

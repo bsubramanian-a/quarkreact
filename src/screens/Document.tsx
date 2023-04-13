@@ -101,14 +101,14 @@ function Document() {
                                                     <td className="py-3 border-0 fp-color t-ts fw-normal">1.3MB</td>
                                                     <td className="py-3 border-0 fp-color t-ts fw-normal">Jan 5, 2022/ 10:12 AM</td>
                                                     <td className="py-3 border-0 fp-color t-ts fw-normal">Sacowd.company@gmail.com</td>
-                                                    <td className="py-3 border-0 fp-color t-ts fw-normal"><button className="btn btn-primary rounded-pill p-size text-uppercase fw-medium px-4 btn-download" type="button">Download</button></td>
+                                                    <td className="py-3 border-0 fp-color t-ts fw-normal"><button className="btn btn-primary rounded-pill p-size text-uppercase fw-medium px-4 btn-download" type="button">Upload</button></td>
                                                 </tr>
                                                 <tr className='table-bg'>
                                                     <td className="py-3 border-0 fw-normal c-color px-3">Bill Of Lading</td>
                                                     <td className="py-3 border-0 fp-color t-ts fw-normal">1.3MB</td>
                                                     <td className="py-3 border-0 fp-color t-ts fw-normal">Jan 5, 2022/ 10:12 AM</td>
                                                     <td className="py-3 border-0 fp-color t-ts fw-normal">Sacowd.company@gmail.com</td>
-                                                    <td className="py-3 border-0 fp-color t-ts fw-normal"><button className="btn btn-primary rounded-pill p-size text-uppercase fw-medium px-4 btn-download" type="button">Download</button></td>
+                                                    <td className="py-3 border-0 fp-color t-ts fw-normal"><button className="btn btn-primary rounded-pill p-size text-uppercase fw-medium px-4 btn-download" type="button">Upload</button></td>
                                                 </tr>
                                             </tbody>
                                         </table>

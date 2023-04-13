@@ -61,7 +61,7 @@ function DashboardBooking() {
                                     </div>
                                     <div className="card w-100 mb-3 card-dash card-c">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/dashboard-complete"}>
                                                 <p className="text-center l-h pri-color fw-medium">Cargo Information</p>
                                                 <div className="rounded-circle bg-white d-flex justify-content-center align-items-center d-img">
                                                     <img src={Cargo} />

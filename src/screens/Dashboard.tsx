@@ -45,7 +45,7 @@ function Dashboard() {
                                     </div>
                                     <div className="card w-100 card-dash mb-3">
                                         <div className="card-body p-4">
-                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/booking-information"}>
                                                 <p className="text-center l-h pri-color fw-medium">
                                                     Booking information
                                                 </p>
@@ -57,7 +57,7 @@ function Dashboard() {
                                     </div>
                                     <div className="card w-100 card-dash mb-3">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/cargo-information"}>
                                                 <p className="text-center l-h pri-color fw-medium">
                                                     Cargo Information
                                                 </p>
@@ -69,7 +69,7 @@ function Dashboard() {
                                     </div>
                                     <div className="card w-100 card-dash mb-3">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/information"}>
                                                 <p className="text-center l-h pri-color fw-medium">
                                                     Origin and Destination
                                                 </p>
@@ -81,7 +81,7 @@ function Dashboard() {
                                     </div>
                                     <div className="card w-100 card-dash mb-3">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/dashboard-booking"}>
                                                 <p className="text-center l-h pri-color fw-medium">
                                                     Messages
                                                 </p>
@@ -93,7 +93,7 @@ function Dashboard() {
                                     </div>
                                     <div className="card w-100 card-dash">
                                         <div className="card-body p-4 d-flex justify-content-center align-items-center flex-column">
-                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"#"}>
+                                            <Link className='text-decoration-none d-flex flex-column justify-content-center align-items-center btn-color' to={"/document"}>
                                                 <p className="text-center l-h pri-color fw-medium">
                                                     Documents
                                                 </p>
