@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function InTab() {
     return (
-        <div className="row mt-5 mb-3">
+        <div className="row mt-5 mb-3 gap-3 gap-lg-0">
             <div className="col col-12 col-lg-4 d-flex justify-content-start align-items-center gap-3">
                 <button className="btn btn-primary btn-size d-flex justify-content-center align-items-center" type="button">
                     <img src={EditC} />
@@ -20,12 +20,12 @@ function InTab() {
                 </button>
             </div>
             <div className="col col-12 col-lg-8 d-lg-flex justify-content-end align-items-center gap-3">
-                <form className="w-50">
+                <form className="w-50 mb-3 mb-lg-0">
                     <div className="input-group">
                         <input className="bg-light form-control bg-white ph-t border-0 t-ts px-4 py-3 input-new" type="text" placeholder="search" />
                     </div>
                 </form>
-                <div className="form-group">
+                <div className="form-group mb-3 mb-lg-0">
                     <div id="datetimepicker-3" className="input-group date">
                         <input type="text" className="form-control bg-white border-0 t-ts px-4 py-3 ph-t input-new" placeholder="This month" />
                         <span className="input-group-addon">&nbsp;
@@ -35,8 +35,8 @@ function InTab() {
                         <img className="position-absolute img-c" src={Calender} />
                     </div>
                 </div>
-                <div className="dropdown">
-                    <button className="btn btn-primary dropdown-toggle bg-white border-0 t-ts px-4 py-3 d-flex justify-content-between align-items-center gap-3 btn-download" aria-expanded="false" data-bs-toggle="dropdown" type="button">
+                <div className="dropdown mb-3 mb-lg-0">
+                    <button className="btn btn-primary dropdown-toggle bg-white border-0 t-ts p-4 d-flex justify-content-between align-items-center text-black gap-3 btn-download" aria-expanded="false" data-bs-toggle="dropdown" type="button">
                         All booking 
                     </button>
                     <div className="dropdown-menu">
